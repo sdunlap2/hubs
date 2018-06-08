@@ -12,3 +12,18 @@ AFRAME.registerComponent("spawn-in-front-of-object", {
     billboardTarget.getWorldQuaternion(this.el.object3D.quaternion);
   }
 });
+
+AFRAME.registerComponent("update-wireframe", {
+  init() {
+    this.timer = 0;
+    this.timerMax = 100;
+  },
+
+  tick(t, dt) {
+    this.timer = this.timer + dt;
+    if (this.timer > this.timerMax) {
+      this.timer = 0;
+      this.el.components.body.shouldUpdateWireframe = true;
+    }
+  }
+});

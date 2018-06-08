@@ -308,7 +308,6 @@ const onReady = async () => {
         const model = document.createElement("a-entity");
         model.id = "interactable-model-" + Date.now();
         model.setAttribute("position", { x: 0, y: 2, z: 1 });
-        model.setAttribute("box-collider-maker", "");
         model.setAttribute("spawn-in-front-of-object", "");
         model.setAttribute("gltf-model-plus", "src", mediaUrl);
         model.setAttribute("networked", { template: "#interactable-model" });

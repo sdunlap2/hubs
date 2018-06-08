@@ -98,7 +98,7 @@ function registerNetworkSchemas() {
 
   NAF.schemas.add({
     template: "#interactable-model",
-    components: ["position", "rotation", "gltf-model-plus"]
+    components: ["position", "rotation", "scale", "gltf-model-plus"]
   });
 }
 
