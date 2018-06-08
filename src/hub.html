@@ -194,6 +194,20 @@
                 ></a-entity>
             </template>
 
+            <template id="interactable-model">
+                <a-entity
+                    gltf-model-plus="inflate: true;"
+                    class="interactable"
+                    super-networked-interactable="counter: #media-counter; mass: 1;"
+                    body="type: dynamic; shape: none; mass: 1;"
+                    grabbable
+                    stretchable="useWorldPosition: true;"
+                    hoverable
+                    box-collider-maker
+                >
+                </a-entity>
+            </template>
+
             <template id="interactable-image">
                 <a-entity
                     class="interactable"
